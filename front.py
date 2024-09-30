@@ -36,7 +36,7 @@ def gc_content_tool():
 
 # Tool page for Transcription
 @app.route('/tools/transcription', methods=['GET', 'POST'])
-def gc_content_tool():
+def transcription_tool():
     result = None
     sequence = ""
 
