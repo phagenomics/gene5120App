@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA to RNA transcription</title>                                               <!-- NAME OF TOOL -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Transcription</h1>                        <!-- NAME OF TOOL -->
+        <form method="POST" class="text-center">
+            <textarea name="sequence" rows="4" cols="50" class="form-control mb-3">{{ sequence }}</textarea><br>
+            <input type="submit" value="Transcribe DNA to RNA" class="btn btn-primary">   <!-- zText on button -->
+        </form>
+        {% if result is not none %}
+            <h3 class="text-center mt-4">RNA sequence:</h3>                        <!--  Text before results -->
+            <p class="text-center">{{ result }}</p>
+        {% endif %}
+        
+	<!-- Back Home Button -->
+        <div class="text-center mt-4">
+            <a href="/" class="btn btn-secondary">Go Back Home</a>
+        </div>
+
+
+    </div>
+</body>
+</html>
