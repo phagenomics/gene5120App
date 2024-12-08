@@ -19,3 +19,16 @@ def primers(seq):
   rev = seq[-10:]
 
   return fwd, comp(rev)
+
+####Calculates the Hamming distance (number of differences) between two DNA sequences.
+
+def hamming_distance(sequence1, sequence2):
+  if len(sequence1) != len(sequence2):
+    print("Error: These two sequences are of different lengths")
+  else:
+    total_differences = 0
+    for i in range(len(sequence1)):
+      if sequence1[i] != sequence2[i]:
+        total_differences += 1
+    return total_differences 
+
