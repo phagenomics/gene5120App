@@ -105,6 +105,24 @@ def melting_tool():
 
     return render_template('melting.html', result=result, sequence=sequence)
 
+# Tool page for Restriction
+@app.route('/tools/restriction', methods=['GET', 'POST'])
+def restriction_tool():
+    result = None
+    sequence1 = ""
+    sequence2 = ""
+
+    if request.method == 'POST':
+        sequence1 = request.form.get('sequence1', '').upper().strip()
+        sequence2 = request.form.get('sequence2', '').upper().strip()
+
+        if sequence1 and sequence2:
+            result = hamming(sequence1, sequence2)
+
+    return render_template('restriction.html', result=result, sequence1=sequence1, sequence2=sequence2)
+
+
+
 # Tool page for ORFS
 @app.route('/tools/orfs', methods=['GET', 'POST'])
 def orfs_tool():
@@ -117,6 +135,24 @@ def orfs_tool():
             result = reverse_comp(sequence)
 
     return render_template('orfs.html', result=result, sequence=sequence)
+
+
+# Tool page for Primers
+@app.route('/tools/primers', methods=['GET', 'POST'])
+def primers_tool():
+    result = None
+    sequence1 = ""
+    sequence2 = ""
+
+    if request.method == 'POST':
+        sequence1 = request.form.get('sequence1', '').upper().strip()
+        sequence2 = request.form.get('sequence2', '').upper().strip()
+
+        if sequence1 and sequence2:
+            result = hamming(sequence1, sequence2)
+
+    return render_template('primers.html', result=result, sequence1=sequence1, sequence2=sequence2)
+
 
 
 # Tool page for Mass calc
