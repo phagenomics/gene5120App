@@ -77,6 +77,7 @@ def translation_tool():
 
 
 # Tool page for Hamming
+@app.route('/tools/hamming', methods=['GET', 'POST'])
 def hamming_tool():
     result = None
     sequence1 = ""
