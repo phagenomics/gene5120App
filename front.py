@@ -62,7 +62,7 @@ def melting_tool():
 
 # Tool page for Codon Frequency
 @app.route('/tools/codon', methods=['GET', 'POST'])
-def melting_tool():
+def codon_tool():
     result = None
     sequence = ""
 
@@ -91,7 +91,7 @@ def hamming_tool():
 
 # Tool page for Mass calc
 @app.route('/tools/mass', methods=['GET', 'POST'])
-def melting_tool():
+def mass_tool():
     result = None
     sequence = ""
 
