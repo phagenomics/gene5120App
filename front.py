@@ -47,5 +47,18 @@ def transcription_tool():
 
     return render_template('transcription.html', result=result, sequence=sequence)
 
+# Tool page for Melting
+@app.route('/tools/melting', methods=['GET', 'POST'])
+def melting_tool():
+    result = None
+    sequence = ""
+
+    if request.method == 'POST':
+        sequence = request.form.get('sequence', '').upper()
+        if sequence:
+            result = reverse_comp(sequence)
+
+    return render_template('melting.html', result=result, sequence=sequence)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
