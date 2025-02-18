@@ -162,17 +162,19 @@ def orfs_tool():
 def primers_tool():
     result = None
     sequence1 = ""
-    sequence2 = ""
+    primer_length = ""
 
     if request.method == 'POST':
         sequence1 = request.form.get('sequence1', '').upper().strip()
-        sequence2 = request.form.get('sequence2', '').upper().strip()   ### This is the primer length
+        primer_length = request.form.get('sequence2', '').strip()
 
-        if sequence1 and sequence2:
-            result = primers(sequence1, sequence2)
+        try:
+            primer_length = int(primer_length)
+            result = primers(sequence1, primer_length)
+        except ValueError:
+            result = "Invalid primer length. Please enter a valid integer."
 
-    return render_template('primers.html', result=result, sequence1=sequence1, sequence2=sequence2)
-
+    return render_template('primers.html', result=result, sequence1=sequence1, sequence2=primer_length)
 
 
 # Tool page for Mass calc
