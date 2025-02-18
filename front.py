@@ -60,6 +60,20 @@ def melting_tool():
 
     return render_template('melting.html', result=result, sequence=sequence)
 
+# Tool page for Codon Frequency
+@app.route('/tools/codon', methods=['GET', 'POST'])
+def melting_tool():
+    result = None
+    sequence = ""
+
+    if request.method == 'POST':
+        sequence = request.form.get('sequence', '').upper()
+        if sequence:
+            result = reverse_comp(sequence)
+
+    return render_template('codon.html', result=result, sequence=sequence)
+
+
 # Tool page for Hamming
 def hamming_tool():
     result = None
@@ -74,6 +88,21 @@ def hamming_tool():
             result = hamming(sequence1, sequence2)
 
     return render_template('hamming.html', result=result, sequence1=sequence1, sequence2=sequence2)
+
+# Tool page for Mass calc
+@app.route('/tools/mass', methods=['GET', 'POST'])
+def melting_tool():
+    result = None
+    sequence = ""
+
+    if request.method == 'POST':
+        sequence = request.form.get('sequence', '').upper()
+        if sequence:
+            result = reverse_comp(sequence)
+
+    return render_template('mass.html', result=result, sequence=sequence)
+
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
