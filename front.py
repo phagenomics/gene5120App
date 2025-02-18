@@ -30,7 +30,7 @@ def gc_content_tool():
     if request.method == 'POST':
         sequence = request.form.get('sequence', '').upper()
         if sequence:
-            result = reverse_comp(sequence)
+            result = gc_content(sequence)
 
     return render_template('gc_content.html', result=result, sequence=sequence)
 
@@ -43,7 +43,7 @@ def transcription_tool():
     if request.method == 'POST':
         sequence = request.form.get('sequence', '').upper()
         if sequence:
-            result = reverse_comp(sequence)
+            result = transcription(sequence)
 
     return render_template('transcription.html', result=result, sequence=sequence)
 
