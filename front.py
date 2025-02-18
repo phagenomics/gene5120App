@@ -128,18 +128,19 @@ def restriction_tool():
 def palindrome_tool():
     result = None
     sequence1 = ""
-    sequence2 = ""
+    palindrome_length = ""
 
     if request.method == 'POST':
         sequence1 = request.form.get('sequence1', '').upper().strip()
-        sequence2 = request.form.get('sequence2', '').strip()   #### This is the length of the palindrome
+        palindrome_length = request.form.get('sequence2', '').strip()
 
-        if sequence1 and sequence2:
-            sequence2 = int(sequence2)
-            result = palidrome(sequence1, sequence2)
+        try:
+            palindrome_length = int(palindrome_length)
+            result = palindrome(sequence1, palindrome_length)
+        except ValueError:
+            result = "Invalid length input. Please enter a valid integer."
 
-    return render_template('palindrome.html', result=result, sequence1=sequence1, sequence2=sequence2)
-
+    return render_template('palindrome.html', result=result, sequence1=sequence1, sequence2=palindrome_length)
 
 
 # Tool page for ORFS
