@@ -60,5 +60,20 @@ def melting_tool():
 
     return render_template('melting.html', result=result, sequence=sequence)
 
+# Tool page for Hamming
+def hamming_tool():
+    result = None
+    sequence1 = ""
+    sequence2 = ""
+
+    if request.method == 'POST':
+        sequence1 = request.form.get('sequence1', '').upper().strip()
+        sequence2 = request.form.get('sequence2', '').upper().strip()
+
+        if sequence1 and sequence2:
+            result = hamming(sequence1, sequence2)
+
+    return render_template('hamming.html', result=result, sequence1=sequence1, sequence2=sequence2)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
