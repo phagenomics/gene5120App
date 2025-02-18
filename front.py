@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 #from bioinformatics.reverse import reverse_comp  # Import the function
-from bioinformatics.scripts import reverse_comp, gc_content, transcription, codon_frequency, translation, hamming, melting_temp, restriction, palindrome, orf_finder, primers, atomic_mass
+#from bioinformatics.scripts import reverse_comp, gc_content, transcription, codon_frequency, translation, hamming, melting_temp, restriction, palindrome, orf_finder, primers, atomic_mass
 
 
 app = Flask(__name__)
