@@ -58,7 +58,7 @@ def codon_tool():
     if request.method == 'POST':
         sequence = request.form.get('sequence', '').upper()
         if sequence:
-            result = reverse_comp(sequence)
+            result = codon_frequency(sequence)
 
     return render_template('codon.html', result=result, sequence=sequence)
 
@@ -71,7 +71,7 @@ def translation_tool():
     if request.method == 'POST':
         sequence = request.form.get('sequence', '').upper()
         if sequence:
-            result = reverse_comp(sequence)
+            result = translation(sequence)
 
     return render_template('translation.html', result=result, sequence=sequence)
 
@@ -101,7 +101,7 @@ def melting_tool():
     if request.method == 'POST':
         sequence = request.form.get('sequence', '').upper()
         if sequence:
-            result = reverse_comp(sequence)
+            result = melting_temp(sequence)
 
     return render_template('melting.html', result=result, sequence=sequence)
 
@@ -114,10 +114,10 @@ def restriction_tool():
 
     if request.method == 'POST':
         sequence1 = request.form.get('sequence1', '').upper().strip()
-        sequence2 = request.form.get('sequence2', '').upper().strip()
+        sequence2 = request.form.get('sequence2', '').upper().strip()   #### this is the expected recognition site
 
         if sequence1 and sequence2:
-            result = hamming(sequence1, sequence2)
+            result = restriction(sequence1, sequence2)
 
     return render_template('restriction.html', result=result, sequence1=sequence1, sequence2=sequence2)
 
@@ -130,10 +130,10 @@ def palindrome_tool():
 
     if request.method == 'POST':
         sequence1 = request.form.get('sequence1', '').upper().strip()
-        sequence2 = request.form.get('sequence2', '').upper().strip()
+        sequence2 = request.form.get('sequence2', '').upper().strip()   #### This is the length of the palindrome
 
         if sequence1 and sequence2:
-            result = hamming(sequence1, sequence2)
+            result = palidrome(sequence1, sequence2)
 
     return render_template('palindrome.html', result=result, sequence1=sequence1, sequence2=sequence2)
 
@@ -148,7 +148,7 @@ def orfs_tool():
     if request.method == 'POST':
         sequence = request.form.get('sequence', '').upper()
         if sequence:
-            result = reverse_comp(sequence)
+            result = orf_finder(sequence)
 
     return render_template('orfs.html', result=result, sequence=sequence)
 
@@ -162,10 +162,10 @@ def primers_tool():
 
     if request.method == 'POST':
         sequence1 = request.form.get('sequence1', '').upper().strip()
-        sequence2 = request.form.get('sequence2', '').upper().strip()
+        sequence2 = request.form.get('sequence2', '').upper().strip()   ### This is the primer length
 
         if sequence1 and sequence2:
-            result = hamming(sequence1, sequence2)
+            result = primers(sequence1, sequence2)
 
     return render_template('primers.html', result=result, sequence1=sequence1, sequence2=sequence2)
 
@@ -180,7 +180,7 @@ def mass_tool():
     if request.method == 'POST':
         sequence = request.form.get('sequence', '').upper()
         if sequence:
-            result = reverse_comp(sequence)
+            result = atomic_mass(sequence)
 
     return render_template('mass.html', result=result, sequence=sequence)
 
