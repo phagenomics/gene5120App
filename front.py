@@ -121,6 +121,22 @@ def restriction_tool():
 
     return render_template('restriction.html', result=result, sequence1=sequence1, sequence2=sequence2)
 
+# Tool page for Palindromes
+@app.route('/tools/palindromes', methods=['GET', 'POST'])
+def palindromes_tool():
+    result = None
+    sequence1 = ""
+    sequence2 = ""
+
+    if request.method == 'POST':
+        sequence1 = request.form.get('sequence1', '').upper().strip()
+        sequence2 = request.form.get('sequence2', '').upper().strip()
+
+        if sequence1 and sequence2:
+            result = hamming(sequence1, sequence2)
+
+    return render_template('palindromes.html', result=result, sequence1=sequence1, sequence2=sequence2)
+
 
 
 # Tool page for ORFS
