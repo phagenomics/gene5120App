@@ -38,29 +38,30 @@ def show_codons(sequence):
         }
     
     total_codons = 0
-
+    codons = None
     input_rna = to_rna(sequence)
     n = 3 #for number of nucleotides per codon
-    for i in range(len(input_rna)):
+    codons = [input_rna[i:i+n] for i in range(0, len(input_rna), n) if len(input_rna[i:i+n]) == n and input_rna[i:i+n] in codon_table]
 
-        if input_rna[i:i+n] == "AUG": # Finds start codon
-            # Only keeps codons with length of n declared
-            codons = [input_rna[j:j+n] for j in range(i, len(input_rna), n) if len(input_rna[j:j+n]) == n]
+    # for i in range(len(input_rna)):
+        # if input_rna[i:i+n] == "AUG": # Finds start codon
+        #     # Only keeps codons with length of n declared
+        #     codons = [input_rna[j:j+n] for j in range(i, len(input_rna), n) if len(input_rna[j:j+n]) == n]
             
 
-            for codon in codons:  
-                    if codon in codon_table:
-                        if codon_table[codon] == 'Stop':
-                            total_codons += 1
-                            break
-                        else:
-                            total_codons += 1
+        #     for codon in codons:  
+        #             if codon in codon_table:
+        #                 if codon_table[codon] == 'Stop':
+        #                     total_codons += 1
+        #                     break
+        #                 else:
+        #                     total_codons += 1
 
-            # # Final check to make sure the last codon is a Stop codon and not just the end of the string
-            # if codon_table[codon] == "Stop": 
-            #     proteins.append(protein) 
     # return total_codons
     return codons
+
+
+
 
 
 def codon_frequency(input_sequence):
@@ -77,7 +78,7 @@ def codon_frequency(input_sequence):
 
 
 
-# print(f"There is a start codon.\nTotal number of valid codons: {codon_frequency(STRING)}")
+# print(f"{codon_frequency(STRING)}")
     
 
 
