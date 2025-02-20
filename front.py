@@ -19,7 +19,7 @@ def reverse_complement_tool():
     if request.method == 'POST':
         sequence = request.form.get('sequence', '').upper()
         if sequence:
-            result = reverse_comp(sequence)
+            result = rev_comp(sequence)
 
     return render_template('reverse_complement.html', result=result, sequence=sequence)
 
