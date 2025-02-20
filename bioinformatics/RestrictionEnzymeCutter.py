@@ -1,4 +1,4 @@
-def restriction_tool(seq, enzyme):
+def restriction(seq, enzyme):
     site = seq.find(enzyme)
     fragment1 = seq[:site]
     fragment2 = seq[site+len(enzyme):]

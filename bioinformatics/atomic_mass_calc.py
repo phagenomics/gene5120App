@@ -10,6 +10,7 @@ mass = {
 
 
 def atomic_mass(seq):
-  print(sum(float(mass[i]) for i in seq))
+  answer = (sum(float(mass[i]) for i in seq))
+  return answer
 
-mass_calc(sequence)
+
