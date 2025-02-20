@@ -3,4 +3,4 @@ def reverse_palindrome(seq,length):
   n = length
   for i in range(len(seq)):
     if seq[i:i+n] == rev_seq[i:i+n] and len(seq[i:i+n]) == n:
-      return i+1,seq[i:i+n])
+      return i+1,seq[i:i+n]
