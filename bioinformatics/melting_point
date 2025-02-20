@@ -1,0 +1,10 @@
+#formula being used Tm = 2(A+T) + 4(G+C)
+
+test = 
+
+def melting_point(seq):
+    seq=seq.upper()
+    tm = 2*(seq.count('A') + seq.count('T')) + 4*(seq.count('G') + seq.count('C'))
+    print(tm)
+
+melting_point(test)
