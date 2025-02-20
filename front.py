@@ -7,7 +7,8 @@ from bioinformatics.rna_to__protein__translation import translation
 from bioinformatics.codon_frequency import codon_frequency
 from bioinformatics.hamming import hamming
 from bioinformatics.melting_point import melting_temp
-#from bioinformatics.transcribe_dna_to_rna import transcription
+from bioinformatics.reverse_palindrome_seq import palindrome
+from bioinformatics.transcribe_dna_to_rna import transcription
 #from bioinformatics.scripts import reverse_comp, gc_content, transcription, codon_frequency, translation, hamming, melting_temp, restriction, palindrome, orf_finder, primers, atomic_mass
 
 
