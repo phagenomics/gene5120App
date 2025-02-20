@@ -9,7 +9,7 @@ mass = {
 }
 
 
-def mass_calc(seq):
+def atomic_mass(seq):
   print(sum(float(mass[i]) for i in seq))
 
 mass_calc(sequence)
