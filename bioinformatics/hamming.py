@@ -2,6 +2,8 @@
 #t= "GCTACGTACGTACCT"
 
 def HamTime(s,t): #takes in two strings
+  s = s.strip()
+  t = t.strip()
   if len(s)==len(t): #checks for lengths
     HamCount =0 #init var
     for i in range(len(s)): #iterate through list
