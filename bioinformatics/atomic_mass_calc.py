@@ -10,5 +10,5 @@ mass = {
 
 
 def atomic_mass(seq):
-  answer = (sum(float(mass[i]) for i in seq.strip()))
+  answer = (sum(float(mass[i]) for i in seq.strip() if i in mass ))
   return answer
