@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 from bioinformatics.reverse import rev_comp  # Import the function
 from bioinformatics.RestrictionEnzymeCutter import restriction
 from bioinformatics.gc_content import gc_content
-#from bioinformatics.atomic_mass_calc import atomic_mass
+from bioinformatics.atomic_mass_calc import atomic_mass
 from bioinformatics.rna_to__protein__translation import translation
 from bioinformatics.codon_frequency import codon_frequency
 #from bioinformatics.scripts import reverse_comp, gc_content, transcription, codon_frequency, translation, hamming, melting_temp, restriction, palindrome, orf_finder, primers, atomic_mass
