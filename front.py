@@ -6,6 +6,7 @@ from bioinformatics.atomic_mass_calc import atomic_mass
 from bioinformatics.rna_to__protein__translation import translation
 from bioinformatics.codon_frequency import codon_frequency
 from bioinformatics.hamming import hamming
+from bioinformatics.melting_point import melting_temp
 #from bioinformatics.scripts import reverse_comp, gc_content, transcription, codon_frequency, translation, hamming, melting_temp, restriction, palindrome, orf_finder, primers, atomic_mass
 
 
