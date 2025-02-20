@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from bioinformatics.reverse import rev_comp  # Import the function
+from bioinformatics.RestrictionEnzymeCutter import restriction
 #from bioinformatics.scripts import reverse_comp, gc_content, transcription, codon_frequency, translation, hamming, melting_temp, restriction, palindrome, orf_finder, primers, atomic_mass
 
 
