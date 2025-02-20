@@ -7,7 +7,7 @@ from bioinformatics.rna_to__protein__translation import translation
 from bioinformatics.codon_frequency import codon_frequency
 from bioinformatics.hamming import hamming
 from bioinformatics.melting_point import melting_temp
-#from bioinformatics.reverse_palindrome_seq import palindrome
+from bioinformatics.reverse_palindrome_seq import reverse_palindrome
 from bioinformatics.transcribe_dna_to_rna import transcription
 from bioinformatics.primers import primers
 #from bioinformatics.scripts import reverse_comp, gc_content, transcription, codon_frequency, translation, hamming, melting_temp, restriction, palindrome, orf_finder, primers, atomic_mass
@@ -146,7 +146,7 @@ def palindrome_tool():
 
         try:
             palindrome_length = int(palindrome_length)
-            result = palindrome(sequence1, palindrome_length)
+            result = reverse_palindrome(sequence1, palindrome_length)
         except ValueError:
             result = "Invalid length input. Please enter a valid integer."
 
