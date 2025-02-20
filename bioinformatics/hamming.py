@@ -1,5 +1,5 @@
-#s= "AGCTCGTCGACGTAC"
-#t= "GCTACGTACGTACCT"
+# s= "A1GCTCGTCGACGTAC"
+# t= "GCTACGTACGTACCTC"
 
 def hamming(s,t): #takes in two strings
   s = s.strip()
@@ -7,8 +7,14 @@ def hamming(s,t): #takes in two strings
   if len(s)==len(t): #checks for lengths
     HamCount =0 #init var
     for i in range(len(s)): #iterate through list
-      if s[i]!=t[i]: #if they dont match, increase counter
+      if s[i] != 'A' or 'C' or 'T' or 'G':
+        print('Number detected in string')
+        break
+      elif t[i] != 'A' or 'C' or 'T' or 'G':
+        print('Number detected in string')
+        break
+      elif s[i]!=t[i]: #if they dont match, increase counter
         HamCount +=1
     return HamCount #return counter
   else:
-    print("Strings are not equal")
+    print("Strings are not equal") 
