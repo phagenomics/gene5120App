@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from bioinformatics.reverse import reverse_complement  # Import the function
+from bioinformatics.reverse import rev_comp  # Import the function
 #from bioinformatics.scripts import reverse_comp, gc_content, transcription, codon_frequency, translation, hamming, melting_temp, restriction, palindrome, orf_finder, primers, atomic_mass
 
 
