@@ -11,7 +11,7 @@ def translation(rna):
     codon_dic = {
         'UUU': 'F', 'UUC': 'F', 'UUA': 'L', 'UUG': 'L',
         'UCU': 'S', 'UCC': 'S', 'UCA': 'S', 'UCG': 'S',
-        'UAU': 'Y', 'UAC': 'Y', 'UAA': '', 'UAG': 'STOP', 'UGA': 'STOP',
+        'UAU': 'Y', 'UAC': 'Y', 'UAA': '', 'UAG': '', 'UGA': '',
         'UGU': 'C', 'UGC': 'C', 'UGG': 'W',
         'CUU': 'L', 'CUC': 'L', 'CUA': 'L', 'CUG': 'L',
         'CCU': 'P', 'CCC': 'P', 'CCA': 'P', 'CCG': 'P',
