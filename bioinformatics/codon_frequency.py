@@ -2,7 +2,7 @@
 # Input a DNA or RNA and count the number of codons
 
 # Test string
-# STRING = "ATGAGTAGCTACGTAGCTAGCTAGCTAGCTAGCTGATCGATCGTACGTAGCTAGCTAGCTGATCGATCGTACGTACGTCAGCTAG"
+STRING = "ATGAGTAGCTACGTAGCTAGCTAGCTAGCTAGCTGATCGATCGTACGTAGCTAGCTAGCTGATCGATCGTACGTACGTCAGCTAG"
 # STRING = "AUGUAGUAUCGUACGUAGCUAGCUAGCUAGCUAGCUAGCUGAUCGAUCGUACGUACGUCGAUGCUAGCUAGCUAGCUAGCUAGCUGA"
 
 
@@ -38,6 +38,7 @@ def show_codons(sequence):
         }
     
     total_codons = 0
+
     input_rna = to_rna(sequence)
     n = 3 #for number of nucleotides per codon
     for i in range(len(input_rna)):
@@ -58,7 +59,8 @@ def show_codons(sequence):
             # # Final check to make sure the last codon is a Stop codon and not just the end of the string
             # if codon_table[codon] == "Stop": 
             #     proteins.append(protein) 
-    return total_codons
+    # return total_codons
+    return codons
 
 
 def codon_frequency(input_sequence):
@@ -66,7 +68,12 @@ def codon_frequency(input_sequence):
         input_rna = to_rna(input_sequence)
     else: 
         input_rna = input_sequence
-    return show_codons(input_rna)
+    codons = show_codons(input_rna)
+    dictionary = {i:codons.count(i) for i in set(codons)}
+    # # return show_codons(input_rna)
+    return dictionary
+
+
 
 
 
