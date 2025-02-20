@@ -39,4 +39,4 @@ def translation(rna):
     return ''.join(protein)
 
 
-print(translation(rna))
+
