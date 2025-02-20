@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-#from bioinformatics.reverse import reverse_comp  # Import the function
+from bioinformatics.reverse import rev_comp  # Import the function
 #from bioinformatics.scripts import reverse_comp, gc_content, transcription, codon_frequency, translation, hamming, melting_temp, restriction, palindrome, orf_finder, primers, atomic_mass
 
 
@@ -19,7 +19,7 @@ def reverse_complement_tool():
     if request.method == 'POST':
         sequence = request.form.get('sequence', '').upper()
         if sequence:
-            result = reverse_comp(sequence)
+            result = rev_comp(sequence)
 
     return render_template('reverse_complement.html', result=result, sequence=sequence)
 
