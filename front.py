@@ -9,6 +9,7 @@ from bioinformatics.hamming import hamming
 from bioinformatics.melting_point import melting_temp
 #from bioinformatics.reverse_palindrome_seq import palindrome
 from bioinformatics.transcribe_dna_to_rna import transcription
+from bioinformatics.primers import primers
 #from bioinformatics.scripts import reverse_comp, gc_content, transcription, codon_frequency, translation, hamming, melting_temp, restriction, palindrome, orf_finder, primers, atomic_mass
 
 
@@ -199,7 +200,7 @@ def mass_tool():
 
     return render_template('mass.html', result=result, sequence=sequence)
 
-
+#### Add more blocks here for extra apss
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80)
