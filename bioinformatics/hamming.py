@@ -1,8 +1,5 @@
-# Input sequence 1: AGCTCGTCGACGTAC
-# Input sequence 2: GCTACGTACGTACCT
-
-s= "AGCTCGTCGACGTAC"
-t= "GCTACGTACGTACCT"
+#s= "AGCTCGTCGACGTAC"
+#t= "GCTACGTACGTACCT"
 
 def HamTime(s,t): #takes in two strings
   if len(s)==len(t): #checks for lengths
@@ -13,5 +10,3 @@ def HamTime(s,t): #takes in two strings
     return HamCount #return counter
   else:
     print("Strings are not equal")
-
-print(HamTime(s,t))
