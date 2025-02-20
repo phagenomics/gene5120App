@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1vXcVUcEodG77hbFI11A6iYNOHRDMIVeb
 """
 
-def translate_protien(rna):
+def translation(rna):
     codon_dic = {
         'UUU': 'F', 'UUC': 'F', 'UUA': 'L', 'UUG': 'L',
         'UCU': 'S', 'UCC': 'S', 'UCA': 'S', 'UCG': 'S',
@@ -39,4 +39,4 @@ def translate_protien(rna):
     return ''.join(protein)
 
 
-print(translate_protien(rna))
+print(translation(rna))
