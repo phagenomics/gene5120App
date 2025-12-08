@@ -27,7 +27,6 @@ def restriction(seq, enzyme):
         previous = cut
     fragments.append(seq[previous:])
     return fragments
-
 if __name__ == "__main__":
  EcoR1 = {
     "site":"GAATTC",
