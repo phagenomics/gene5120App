@@ -41,4 +41,3 @@ EcoR1 = {
     "CUT_OFFSET":1
 }dna = "AAGGAATTCCGTTGAATTCGGA"
 Print(restriction(dna, EcoR1))
-}
