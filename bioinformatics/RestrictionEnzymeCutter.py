@@ -1,5 +1,3 @@
-
-
 def restriction(seq, enzyme):
     seq = seq.upper()
     site = enzyme['site'].upper()
