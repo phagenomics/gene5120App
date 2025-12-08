@@ -6,3 +6,11 @@ def restriction(seq, enzyme):
     if cut_pos1 is None:
         cut_pos1 = cut_pos
     return TRUE
+
+def restriction(seq, enzyme):
+    seq = seq.upper()
+    site = enzyme['site'].upper()
+    cut_offset = enzyme['cut_offset']
+
+    cut_positions = []
+    start = 0
