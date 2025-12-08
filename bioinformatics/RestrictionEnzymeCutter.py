@@ -34,3 +34,11 @@ def restriction(seq, enzyme):
     fragments.append(seq[previous:])
 
     return fragments
+
+if_name_ == "__main__":
+EcoR1 = {
+    "site":"GAATTC",
+    "CUT_OFFSET":1
+}dna = "AAGGAATTCCGTTGAATTCGGA"
+Print(restriction(dna, EcoR1))
+}
