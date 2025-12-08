@@ -1,5 +1,4 @@
-def restriction(seq, enzyme):
-    return TRUE
+
 
 def restriction(seq, enzyme):
     seq = seq.upper()
@@ -27,3 +26,10 @@ def restriction(seq, enzyme):
         previous = cut
     fragments.append(seq[previous:])
     return fragments
+if __name__ == "__main__":
+ EcoR1 = {
+    "site":"GAATTC",
+    "CUT_OFFSET":1
+}
+dna = "AAGGAATTCCGTTGAATTCGGA"
+print(restriction(dna, EcoR1))
