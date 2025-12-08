@@ -10,8 +10,6 @@ def reverse_palindrome(seq,length, min_length=4, max_length=12):
     for i in range(n):
         for j in range(i + min_len, min(i + max_len + 1, n + 1)):
             substring = seq[i:j]
-            if substring == reverse_compliment(substring):
-                results.append((i + 1, len(substring)))
 
-    return results
+    return substring
  
