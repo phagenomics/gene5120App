@@ -1,10 +1,4 @@
 def restriction(seq, enzyme):
-    seq = seq.upper()
-    site = enzyme['site'].upper()
-    cut_pos = enzyme['cut_pos'0]
-    cut_pos1 = enzyme.get("cut_pos1", none)
-    if cut_pos1 is None:
-        cut_pos1 = cut_pos
     return TRUE
 
 def restriction(seq, enzyme):
@@ -15,7 +9,7 @@ def restriction(seq, enzyme):
     cut_positions = []
     start = 0
 
-      # Find all occurrences of recognition site
+     # Find all occurrences of recognition site
     while True:
         pos = seq.find(site, start)
         if pos == -1:
@@ -26,18 +20,18 @@ def restriction(seq, enzyme):
     if not cut_positions:
         return [seq] 
     # No cuts
-      fragments = []
+    fragments = []
     previous = 0
     for cut in cut_positions:
         fragments.append(seq[previous:cut])
         previous = cut
     fragments.append(seq[previous:])
-
     return fragments
 
-if_name_ == "__main__":
-EcoR1 = {
+if __name__ == "__main__":
+ EcoR1 = {
     "site":"GAATTC",
     "CUT_OFFSET":1
-}dna = "AAGGAATTCCGTTGAATTCGGA"
-Print(restriction(dna, EcoR1))
+}
+dna = "AAGGAATTCCGTTGAATTCGGA"
+print(restriction(dna, EcoR1))
