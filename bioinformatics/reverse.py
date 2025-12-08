@@ -1,6 +1,7 @@
-def rev_comp(string):
-    ct_g = string.count('G')
-    ct_c = string.count('C')
-    length = len(string)
-    gc_cont = (ct_g + ct_c) / length
-    return gc_cont
+def rev_comp(dna_seq):
+    bp_dict = {'A':'T', 'T':'A', 'C':'G', 'G':'C'}
+    rev = dna_seq[::-1]
+    comp = ''
+    for bp in rev:
+        comp += bp_dict[bp]
+    return comp
