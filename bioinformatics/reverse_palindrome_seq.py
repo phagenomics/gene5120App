@@ -1,2 +1,17 @@
-def reverse_palindrome(seq,length):
-  return TRUE
+def reverse_palindrome(seq,length, min_length=4, max_length=12):
+  results = []
+  n= len(seq)
+
+   def reverse_compliment(seq):
+        complement_map = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
+        complement_seq = "".join([complement_map[base] for base in seq])
+        return complement_seq[::-1]
+
+    for i in range(n):
+        for j in range(i + min_len, min(i + max_len + 1, n + 1)):
+            substring = seq[i:j]
+            if substring == reverse_compliment(substring):
+                results.append((i + 1, len(substring)))
+
+    return results
+ 
