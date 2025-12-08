@@ -8,7 +8,7 @@ def reverse_palindrome(seq,length):
         return complement_seq[::-1]
 
   for i in range(n):
-        for j in range(i), min(i + 1, n + 1)):
+        for j in range(i), min(i + 1, n + 1):
             substring = seq[i:j]
             return substring
 
