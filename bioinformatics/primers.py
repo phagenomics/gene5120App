@@ -14,7 +14,7 @@ def generate_primers(seq, primer_length):
     reverse_primer = reverse_complement(seq[-primer_length:])
     return forward_primer, reverse_primer
 #Example usage with a primer length of 20:
-forward_primer, reverse_primer = generate_primers(sequence, 20)
+forward_primer, reverse_primer = generate_primers(sequence, 10)
 print(f"Forward Primer: {forward_primer}")
 print(f"Reverse Primer: {reverse_primer}")
 return TRUE
