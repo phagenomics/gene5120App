@@ -1,5 +1,4 @@
-def restriction(seq, enzyme):
-    return TRUE
+
 
 def restriction(seq, enzyme):
     seq = seq.upper()
