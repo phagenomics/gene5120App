@@ -1,4 +1,4 @@
-def reverse_palindrome(seq,length, min_length=4, max_length=12):
+def reverse_palindrome(seq,length):
   results = []
   n= len(seq)
 
@@ -8,8 +8,8 @@ def reverse_palindrome(seq,length, min_length=4, max_length=12):
         return complement_seq[::-1]
 
   for i in range(n):
-        for j in range(i + min_length, min(i + max_length + 1, n + 1)):
+        for j in range(i), min(i + 1, n + 1)):
             substring = seq[i:j]
             return substring
 
-reverse_palindrome(Rosalind_4746, 4, 12)
+#reverse_palindrome(Rosalind_4746, 4, 12)
