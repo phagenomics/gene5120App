@@ -1,4 +1,4 @@
-def hamming_distance(seq1, seq2):
+def hamming(seq1, seq2):
     """
     Calculate the Hamming distance between two DNA sequences
     of equal length.
