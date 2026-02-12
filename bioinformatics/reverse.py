@@ -13,3 +13,4 @@ def reverse_complement(dna_seq):
     rev_comp = ''.join(complement.get(base, base) for base in reversed(dna_seq))
     
     return rev_comp
+## comment
