@@ -4,7 +4,7 @@ def reverse_complement(seq):
     seq = seq.upper()
     return "".join(complement[base] for base in reversed(seq))
 
-def find_palindromes_window(sequence, min_len=4, max_len=12):
+def reverse_palindrome(sequence, min_len=4, max_len=12):
     sequence = sequence.upper()
     results = []
 
