@@ -1,4 +1,4 @@
-def orf(sequence):
+def orf_finder(sequence):
   stop_codons = {"UAA", "UAG", "UGA"}
   orfs = []
 
