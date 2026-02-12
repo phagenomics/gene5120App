@@ -15,8 +15,3 @@ def hamming_distance(seq1, seq2):
     return distance
 
 
-# Example usage
-dna1 = "GATTACA"
-dna2 = "GACTATA"
-
-print("Hamming distance:", hamming_distance(dna1, dna2))
