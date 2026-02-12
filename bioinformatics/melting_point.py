@@ -7,9 +7,9 @@ def melting_temp(sequence):
     for aa in sequence:
         if aa == 'A':
             w += 1
-        elif aa = 'T':
+        elif aa == 'T':
             x += 1
-        elif aa = 'G':
+        elif aa == 'G':
             y +=1
         else:
             z += 1
