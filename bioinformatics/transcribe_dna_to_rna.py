@@ -8,3 +8,8 @@ def dna_to_rna(dna_sequence):
 
     rna_sequence = dna_sequence.replace('A', 'U')
     return rna_sequence 
+
+#I tested on colab, added a line to ensure that only A T C G are allowed in the imput other wise
+# it will retun invalid error
+
+#Converted all A -> U to go from DNA to RNA
