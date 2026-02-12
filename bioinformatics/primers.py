@@ -21,5 +21,3 @@ def primers(seq, primer_length):
     )
 
     return forward, reverse
-
-
