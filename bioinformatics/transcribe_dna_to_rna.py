@@ -1,12 +1,12 @@
-def dna_to_rna(dna_sequence):
+def transcription(dna_string):
   
-    dna_sequence = dna_sequence.upper()
+    dna_string = dna_string.upper()
     valid_bases = {'A', 'T', 'G', 'C'}
-    if not all(base in valid_bases for base in dna_sequence):
-        invalid_chars = set(char for char in dna_sequence if char not in valid_bases)
+    if not all(base in valid_bases for base in dna_string):
+        invalid_chars = set(char for char in dna_string if char not in valid_bases)
         raise ValueError(f"Invalid character(s) found in DNA sequence: {', '.join(invalid_chars)}. Only A, T, G, C are allowed.")
 
-    rna_sequence = dna_sequence.replace('A', 'U')
+    rna_sequence = dna_string.replace('A', 'U')
     return rna_sequence 
 
 #I tested on colab, added a line to ensure that only A T C G are allowed in the imput other wise
