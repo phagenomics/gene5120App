@@ -1,5 +1,5 @@
 ## This will be a quick
-def reverse_complement(dna_seq):
+def rev_comp(dna_seq):
     complement = {
         'A': 'T',
         'T': 'A',
@@ -14,5 +14,3 @@ def reverse_complement(dna_seq):
     rev_comp = ''.join(complement.get(base, base) for base in reversed(dna_seq))
     
     return rev_comp
-## This will print out the reverse complement sequence
-print(reverse_complement(sequence))
