@@ -20,4 +20,3 @@ def melting_temp(sequence):
         Tm = 64.9 +41*(y+z-16.4)/(w+x+y+z)
     return Tm
 
-#I'm following along
