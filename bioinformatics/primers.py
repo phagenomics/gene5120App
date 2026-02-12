@@ -7,5 +7,19 @@
 #def primers(sequence):
 #    sequence = 'ATGCGGGCGAGCGTTTCGGAGGGTATTTATTATCTTTCTATCATTTTTTAGGGGAGGATTTTAGGGGATTATCTCTCGATCGATTATCGATC'
 
-def primers(seq):
-    return TRUE
+def primers(seq, primer_length):
+    forward = seq[:primer_length]
+    complement = {
+        'A': 'T',
+        'T': 'A',
+        'C': 'G',
+        'G': 'C'
+    }
+    
+    reverse = ''.join(
+        complement[base] for base in reversed(seq[-primer_length:])
+    )
+
+    return forward, reverse
+
+
