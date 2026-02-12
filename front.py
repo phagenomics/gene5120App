@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from bioinformatics.reverse import rev_comp  # Import the function
+#from bioinformatics.reverse import rev_comp  # Import the function
 from bioinformatics.RestrictionEnzymeCutter import restriction
 from bioinformatics.gc_content import gc_content
 from bioinformatics.atomic_mass_calc import atomic_mass
