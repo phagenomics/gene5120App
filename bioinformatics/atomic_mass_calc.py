@@ -2,24 +2,8 @@ def atomic_mass(seq):
   return TRUE
 
 
-!pip install periodictable
 
-import periodictable
-
-def calculate_atomic_mass(element_symbol):
-
-    symbol_upper = element_symbol.upper()
-
-    try:
-        # Try to get atomic mass from periodictable library
-        element = periodictable.elements.symbol(symbol_upper)
-        if element.mass is not None:
-            return element.mass
-    except Exception:
-        # Fallback if periodictable doesn't find it or is not installed/imported
-        pass
-
-    # A dictionary of common elements and their approximate atomic masses
+    # A dictionary of common elements and atomic masses
     atomic_masses = {
         'H': 1.008,
         'He': 4.0026,
@@ -43,10 +27,25 @@ def calculate_atomic_mass(element_symbol):
         'Ca': 40.078,
         'Au': 196.96657 # Added Gold for demonstration
     }
+# function
+def get_atomic_mass(element):
+    return atomic_masses.get(element, "Element not found")
 
-    if symbol_upper in atomic_masses:
-        return atomic_masses[symbol_upper]
-    else:
-        return f"Atomic mass for '{element_symbol}' not found in the database."
+# test
+print(get_atomic_mass("C"))   # 12.011
+print(get_atomic_mass("O"))   # 15.999
 
+def molecular_mass(formula_dict):
+    total_mass = 0
+    
+    for element, count in formula_dict.items():
+        mass = atomic_masses.get(element)
+        
+        if mass is None:
+            print(f"Unknown element: {element}")
+            return None
+        
+        total_mass += mass * count
+    
+    return total_mass
 
